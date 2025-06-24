@@ -41,5 +41,3 @@ setInterval(() => {
   const ahora = new Date();
   document.getElementById("reloj").textContent = ahora.toLocaleTimeString();
 }, 1000);
-
-document.getElementById("tecleo").play();
