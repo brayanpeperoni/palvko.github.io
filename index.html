@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Básicos -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TH3 BR4Y4N</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <canvas id="matrixCanvas"></canvas>
 
@@ -21,38 +20,70 @@
   <div id="reloj" class="glow reloj-digital"></div>
 
   <footer class="footer-flex">
-    <div class="recomendaciones">
-      <h3>💡 Recomendaciones del Admin</h3>
-      <ul>
-        <li>Instala Kali Linux y explora sus herramientas.</li>
-        <li>Aprende sobre redes y protocolos (TCP/IP, DNS, DHCP).</li>
-        <li>Practica con máquinas virtuales como Metasploitable.</li>
-        <li>Visita <a href="https://tryhackme.com" target="_blank">TryHackMe</a> para retos.</li>
-        <li>Mantente siempre en modo aprendizaje 🧠💻.</li>
-      </ul>
-    </div>
-
-    <div class="canciones">
-      <h3>🎧 TOP 5 CANCIONES ÉPICAS</h3>
-      <a href="https://www.youtube.com/watch?v=BTRCZvDPH1Y" target="_blank" onclick="reproducirSonido()">🎵 26is SAUNA</a>
-      <a href="https://www.youtube.com/watch?v=pdH9SGtPdiY" target="_blank" onclick="reproducirSonido()">🎵 KOKO ⛰️ - Jeyceu</a>
-      <a href="https://www.youtube.com/watch?v=_olRJ3Ni244" target="_blank" onclick="reproducirSonido()">🎵 PÁRATE BONITO</a>
-      <a href="https://www.youtube.com/watch?v=TftTeDrp09s" target="_blank" onclick="reproducirSonido()">🎵 Oh Que Lokazo</a>
-      <a href="https://www.youtube.com/watch?v=GVbI-X35aE8" target="_blank" onclick="reproducirSonido()">🎵 El primer trago</a>
-    </div>
-  </footer>
-
-  <small style="color: #222; font-size: 10px; text-align: center; opacity: 0.3; display: block; margin-top: 20px;">
-    Enlaces externos pertenecen a sus respectivos dueños. Esta es una página educativa/personal sin fines de lucro.
-  </small>
-
-  <audio id="sonido" src="https://www.myinstants.com/media/sounds/windows-xp-error.mp3"></audio>
-
-  <div class="terminal-falsa">
-    <p id="cmd-output" class="glow">root@th3br4y4n:~$</p>
+  <!-- IZQUIERDA -->
+  <div class="recomendaciones">
+    <h3>💡 Recomendaciones del Admin</h3>
+    <ul>
+      <li>Instala Kali Linux y explora sus herramientas.</li>
+      <li>Aprende sobre redes y protocolos (TCP/IP, DNS, DHCP).</li>
+      <li>Practica con máquinas virtuales como Metasploitable.</li>
+      <li>Visita <a href="https://tryhackme.com" target="_blank">TryHackMe</a> para retos.</li>
+      <li>Mantente siempre en modo aprendizaje 🧠💻.</li>
+    </ul>
   </div>
 
+  <!-- DERECHA -->
+  <div class="canciones">
+    <h3>🎧 TOP 5 CANCIONES ÉPICAS</h3>
+    <a href="https://www.youtube.com/watch?v=BTRCZvDPH1Y" target="_blank" onclick="reproducirSonido()">🎵 26is SAUNA</a>
+    <a href="https://www.youtube.com/watch?v=pdH9SGtPdiY" target="_blank" onclick="reproducirSonido()">🎵 KOKO ⛰️ - Jeyceu</a>
+    <a href="https://www.youtube.com/watch?v=_olRJ3Ni244" target="_blank" onclick="reproducirSonido()">🎵 PÁRATE BONITO</a>
+    <a href="https://www.youtube.com/watch?v=TftTeDrp09s" target="_blank" onclick="reproducirSonido()">🎵 Oh Que Lokazo</a>
+    <a href="https://www.youtube.com/watch?v=GVbI-X35aE8" target="_blank" onclick="reproducirSonido()">🎵 El primer trago</a>
+  </div>
+</footer>
+
+<!-- Aviso legal -->
+<small style="color: #222; font-size: 10px; text-align: center; opacity: 0.3; display: block; margin-top: 20px;">
+  Enlaces externos pertenecen a sus respectivos dueños. Esta es una página educativa/personal sin fines de lucro.
+</small>
+
+
+
+  <audio id="sonido" src="https://www.myinstants.com/media/sounds/windows-xp-error.mp3"></audio>
   <script src="script.js"></script>
+  <div class="terminal-falsa">
+  <p id="cmd-output" class="glow">root@th3br4y4n:~$</p>
+</div>
+
+<script>
+  const comandos = [
+    "nmap -sV 192.168.1.1",
+    "ping google.com -t",
+    "sudo apt install metasploit",
+    "hydra -l admin -P rockyou.txt 192.168.1.5 ssh",
+    "echo 'Bienvenido al sistema de TH3 BR4Y4N 💻'"
+  ];
+
+  let index = 0;
+
+  function escribirComando(texto, i = 0) {
+    if (i < texto.length) {
+      document.getElementById("cmd-output").innerHTML += texto.charAt(i);
+      setTimeout(() => escribirComando(texto, i + 1), 70);
+    } else {
+      setTimeout(() => {
+        document.getElementById("cmd-output").innerHTML += "<br><span class='glow'>root@th3br4y4n:~$ </span>";
+        index = (index + 1) % comandos.length;
+        escribirComando(comandos[index]);
+      }, 1500);
+    }
+  }
+
+  escribirComando(comandos[index]);
+</script>
+
 </body>
+
 </html>
 
