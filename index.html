@@ -1,94 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TH3 BR4Y4N</title>
-  <meta property="og:title" content="TH3 BR4Y4N - Mundo Hacker Personal" />
-  <meta property="og:description" content="Explora herramientas, estilo hacker y más." />
-  <meta property="og:image" content="https://th3br4yan.netlify.app/capi.png" />
-  <meta property="og:url" content="https://th3br4yan.netlify.app/" />
-  <meta property="og:type" content="website" />
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SoyDibujitoDe♥</title>
+  <meta name="description" content="Bienvenidos a la comunidad Legions Dragons Z – creatividad, diversión y mucho más. ¡Únete!">
+
+  <!-- PREVISUALIZACIÓN PARA WHATSAPP (Open Graph) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SoyDibujitoDe♥ – Legions Dragons Z">
+  <meta property="og:description" content="Un espacio donde compartimos creatividad, diversión y mucho más. ¡Únete a la familia!">
+  <meta property="og:url" content="https://dibujitos.netlify.app/">
+  <meta property="og:image" content="./img/enlace.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <canvas id="matrixCanvas"></canvas>
+  <div class="fondo">
+    <img class="b" src="./img/fondo.png" alt="fond">
+  </div> <br> <br>
+<div class="description">
+      <h2>Descripción</h2> 
+      <p alt="des">
+        Bienvenidos a la comunidad <br>Legions Dragons Z<br> un espacio donde
+        compartimos creatividad, diversión y mucho más. ¡Únete y sé parte de
+        esta gran familia!
+      </p> <br>
+    </div>
 
-  <h1 class="glow">BIENVENIDOS A LA PÁGINA DE<br>"TH3 BR4Y4N"</h1>
-  <hr>
+<body class="gif">
+<h2 class="admin">Administradores de la Comunidad</h2>  <br>
 
-  <div class="agradecimiento">
-    <button id="botonCurso" onclick="irACurso()">IR A CURSO DE HACKING 💻</button>
-  </div>
+    <br>
+  <div class="main-content">
+    <!-- IZQUIERDA: perfiles -->
+    <div class="profiles">
+      <div class="profile">
+        <a href="https://www.tiktok.com/@sam092626" target="_blank" onclick="playAudio('audio-sam')">
+          <img class="glow" src="./img/sam.png" alt="Sam" />
+          <p>Sam</p>
+        </a>
+        <audio id="audio-sam" src="./audio/sam.mp3" preload="auto"></audio>
+      </div>
 
-  <div id="reloj" class="glow reloj-digital"></div>
+      <div class="profile">
+        <a href="https://www.tiktok.com/@paluko1" target="_blank" onclick="playAudio('audio-brayan')">
+          <img class="glow" src="./img/brayan.png" alt="Brayan" />
+          <p>Brayan</p>
+        </a>
+        <audio id="audio-brayan" src="./audio/brayan.mp3" preload="auto"></audio>
+      </div>
 
-  <footer class="footer-flex">
-  <!-- IZQUIERDA -->
-  <div class="recomendaciones">
-    <h3>💡 Recomendaciones del Admin</h3>
-    <ul>
-      <li>Instala Kali Linux y explora sus herramientas.</li>
-      <li>Aprende sobre redes y protocolos (TCP/IP, DNS, DHCP).</li>
-      <li>Practica con máquinas virtuales como Metasploitable.</li>
-      <li>Visita <a href="https://tryhackme.com" target="_blank">TryHackMe</a> para retos.</li>
-      <li>Mantente siempre en modo aprendizaje 🧠💻.</li>
-    </ul>
-  </div>
+      <div class="profile">
+        <a href="https://www.tiktok.com/@chespi_chow" target="_blank">
+          <img class="glow" src="./img/chespi.png" alt="Chespi" />
+          <p>Chespi</p>
+        </a>
+      </div>
 
-  <!-- DERECHA -->
-  <div class="canciones">
-    <h3>🎧 TOP 5 CANCIONES ÉPICAS</h3>
-    <a href="https://www.youtube.com/watch?v=BTRCZvDPH1Y" target="_blank" onclick="reproducirSonido()">🎵 26is SAUNA</a>
-    <a href="https://www.youtube.com/watch?v=pdH9SGtPdiY" target="_blank" onclick="reproducirSonido()">🎵 KOKO ⛰️ - Jeyceu</a>
-    <a href="https://www.youtube.com/watch?v=_olRJ3Ni244" target="_blank" onclick="reproducirSonido()">🎵 PÁRATE BONITO</a>
-    <a href="https://www.youtube.com/watch?v=TftTeDrp09s" target="_blank" onclick="reproducirSonido()">🎵 Oh Que Lokazo</a>
-    <a href="https://www.youtube.com/watch?v=GVbI-X35aE8" target="_blank" onclick="reproducirSonido()">🎵 El primer trago</a>
-  </div>
-</footer>
+      <div class="profile">
+        <a href="https://www.tiktok.com/@andrea.ariasof" target="_blank" onclick="playAudio('audio-andrea')">
+          <img class="glow" src="./img/andrea.png" alt="Andrea" />
+          <p>Andrea</p>
+        </a>
+        <audio id="audio-andrea" src="./audio/andrea.mp3" preload="auto"></audio>
+      </div>
 
-<!-- Aviso legal -->
-<small style="color: #222; font-size: 10px; text-align: center; opacity: 0.3; display: block; margin-top: 20px;">
-  Enlaces externos pertenecen a sus respectivos dueños. Esta es una página educativa/personal sin fines de lucro.
-</small>
+      <div class="profile">
+        <a href="https://www.tiktok.com/@martinez220325" target="_blank">
+          <img class="glow" src="./img/martinez.png" alt="Martinez" />
+          <p>Martinez</p>
+        </a>
+      </div>
 
+      <div class="profile">
+        <a href="https://www.tiktok.com/@david.bacalla" target="_blank">
+          <img class="glow" src="./img/davishi.png" alt="Davishi" />
+          <p>Davishi</p>
+        </a>
+      </div>
 
+      <div class="profile">
+        <a href="https://www.tiktok.com/@minidelosbackyardigans" target="_blank"  onclick="playAudio('audio-mini')">
+          <img class="glow" src="./img/mini.png" alt="Mini" />
+          <p>Mini</p>
+        </a>
+         <audio id="audio-mini" src="./audio/mini.mp3" preload="auto"></audio>
+      </div>
 
-  <audio id="sonido" src="https://www.myinstants.com/media/sounds/windows-xp-error.mp3"></audio>
-  <script src="script.js"></script>
-  <div class="terminal-falsa">
-  <p id="cmd-output" class="glow">root@th3br4y4n:~$</p>
+      <div class="profile">
+        <a href="https://www.tiktok.com/@cris_ath29" target="_blank">
+          <img class="glow" src="./img/cris.png" alt="Cris" />
+          <p>Cris</p>
+        </a>
+      </div>
+      <div class="profile">
+        <a href="https://www.tiktok.com/@jhonnlavado31" target="_blank" onclick="playAudio('audio-jhon')">
+          <img class="glow" src="./img/jhon.png" alt="Jhon" />
+          <p>Jhon</p>
+          <audio id="audio-jhon" src="./audio/jhon.mp3" preload="auto"></audio>
+        </a>
+      </div>
+      <div class="profile">
+        <a href="https://www.tiktok.com/@cris_ath29" target="_blank">
+          <img class="glow" src="./img/anonimo.png" alt="anonimo" />
+          <p>anonimo</p>
+        </a>
+      </div>
+    </div>
+    
+  </div> <br><br>
+
+<div class="banner">
+  <img src="./img/baner.png" alt="banner">
+</div>
+
+<div class="floating-icons">
+  <a href="https://wa.me/51977371525" target="_blank" class="whatsapp">
+    <img src="./img/whatsapp.png" alt="WhatsApp">
+  </a>
+  <a href="https://kick.com/palukobra" target="_blank" class="kick">
+    <img src="./img/kick.png" alt="Kick">
+  </a>
+  <a href="https://discord.gg/sYrJmkUW" target="_blank" class="discord">
+    <img src="./img/discord.png" alt="Discord">
+  </a>
+  <a href="https://discord.gg/sYrJmkUW" target="_blank" class="facebook">
+    <img src="./img/fb.png" alt="Facebook">
+  </a>
 </div>
 
 <script>
-  const comandos = [
-    "nmap -sV 192.168.1.1",
-    "ping google.com -t",
-    "sudo apt install metasploit",
-    "hydra -l admin -P rockyou.txt 192.168.1.5 ssh",
-    "echo 'Bienvenido al sistema de TH3 BR4Y4N 💻'"
-  ];
-
-  let index = 0;
-
-  function escribirComando(texto, i = 0) {
-    if (i < texto.length) {
-      document.getElementById("cmd-output").innerHTML += texto.charAt(i);
-      setTimeout(() => escribirComando(texto, i + 1), 70);
-    } else {
-      setTimeout(() => {
-        document.getElementById("cmd-output").innerHTML += "<br><span class='glow'>root@th3br4y4n:~$ </span>";
-        index = (index + 1) % comandos.length;
-        escribirComando(comandos[index]);
-      }, 1500);
-    }
+function playAudio(audioId) {
+  const audio = document.getElementById(audioId);
+  if (audio) {
+    audio.currentTime = 0; // reinicia si estaba reproduciéndose
+    audio.play();
   }
-
-  escribirComando(comandos[index]);
+}
 </script>
 
-</body>
+</body> <br><br>
+<!-- Botón de WhatsApp -->
+<div class="inscripcion">
+  <!-- Botón de inscripción con enlace -->
+  <a href="https://wa.me/51977371525" target="_blank" class="btn evento">
+    🎉 Inscribirse al Evento
+  </a>
+
+  <!-- Botón de WhatsApp con enlace -->
+  <a href="https://chat.whatsapp.com/DSkSgh4n8ZDGFseCQgv4gi?mode=ac_t" target="_blank" class="btn whatsapp">
+    💬 Únete a nuestro grupo de WhatsApp
+  </a>
+</div>
+
+<br><br>
+
+
+<div class="album">
+    <img src="./img/sticker1.jpeg" alt="Sticker 1" class="active">
+    <img src="./img/sticker2.jpeg" alt="Sticker 2" class="active">
+    <img src="./img/sticker3.jpeg" alt="Sticker 3" class="active">
+    <img src="./img/sticker4.jpeg" alt="Sticker 4" class="active">
+    <img src="./img/sticker5.jpeg" alt="Sticker 5" class="active">
+    <img src="./img/sticker6.webp" alt="Sticker 6" class="active">
+</div>
+
+
+<br>
+<img class="logo" src="./img/logo.gif" alt="paw">
+<br>
+
+<div class="derecho">
+<footer class="derechos">  
+  <p>© 2025 Legions Dragons Z - Todos los derechos reservados</p>
+</footer>
+</div>
 
 </html>
+
 
